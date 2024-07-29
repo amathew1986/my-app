@@ -2,7 +2,7 @@
     "name": "my-app",
     "version": "1.0.0",
     "scripts": {
-       "build": "npm --prefix backend install --f && npm --prefix frontend install --f && npm --prefix frontend run build"
+       "build": "npm --prefix frontend install --f && npm --prefix frontend run build"
     },
     "dependencies": {
       "concurrently": "^6.0.0"
