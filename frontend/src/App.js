@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('/api')
+    fetch('/.netlify/functions/api')
       .then(response => response.json())
       .then(data => setMessage(data.message));
   }, []);
