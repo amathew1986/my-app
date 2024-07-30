@@ -21,7 +21,7 @@ exports.handler = async (event, context) => {
     // Get cookies from the headers
   const cookies = event.headers.cookie ? parseCookies(event.headers.cookie) : {};
   // Access specific cookies
-  const myCookie = cookies["tmpCookie"];
+  const myCookie = cookies["2391-token"];
     return {
       statusCode: 200,
       body: JSON.stringify({ message: "Hello from the API! "+ path,cookies, myCookie }),
