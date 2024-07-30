@@ -16,12 +16,13 @@ const parseCookies = (cookieString) => {
 
 exports.handler = async (event, context) => {
     // Your API logic here
+  const path = event.path
     // Get cookies from the headers
   const cookies = event.headers.cookie ? parseCookies(event.headers.cookie) : {};
   // Access specific cookies
   const myCookie = cookies["tmpCookie"];
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Hello from the API!",cookies, myCookie }),
+      body: JSON.stringify({ message: "Hello from the API!"+ path,cookies, myCookie }),
     };
   };
